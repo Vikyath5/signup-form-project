@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Create your account</h1>
+        <p class="subtitle">Sign up to get started.</p>
+
+        <!-- Progress -->
+        <div class="progress">
+            <span class="step active">1</span>
+            <span class="line"></span>
+            <span class="step">2</span>
+            <span class="line"></span>
+            <span class="step">3</span>
+        </div>
+
+        <form id="signupForm">
+
+            <!-- Step 1 -->
+            <section class="form-step active" data-step="1">
+
+                <h2>Personal Information</h2>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Enter your full name"
+    autocomplete="name"
+    aria-describedby="nameError"
+    aria-invalid="false"
+      required
+>
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="you@example.com"
+    autocomplete="email"
+    aria-describedby="emailError"
+    aria-invalid="false"
+      required
+>
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <button type="button" id="nextBtn">
+                    Continue
+                </button>
+
+            </section>
+
+            <!-- Step 2 -->
+            <section class="form-step" data-step="2">
+
+                <h2>Create Password</h2>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="At least 8 characters"
+    autocomplete="new-password"
+    aria-describedby="passwordError"
+    aria-invalid="false"
+      required
+>
+                    <small class="error" id="passwordError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Enter your password again"
+                        autocomplete="new-password"
+                          required
+                    >
+                    <small class="error" id="confirmPasswordError"></small>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" id="backBtn">
+                        Back
+                    </button>
+
+                    <button type="button" id="nextBtn2">
+                        Continue
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Step 3 -->
+            <section class="form-step" data-step="3">
+
+                <h2>Almost there!</h2>
+
+                <p>
+                    Review your information and create your account.
+                </p>
+
+                <div id="summary"></div>
+                <div id="serverError" class="server-error" role="alert"></div>
+
+                <div class="buttons">
+                    <button type="button" id="backBtn2">
+                        Back
+                    </button>
+
+                    <button type="submit" id="submitBtn">
+                        Create Account
+                    </button>
+                </div>
+
+            </section>
+
+        </form>
+
+        <!-- Success message -->
+        <div id="successMessage" class="success hidden">
+            <h2>Account created! 🎉</h2>
+            <p>Welcome! Your signup was successful.</p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
