@@ -1,3 +1,9 @@
+## Links
+
+- GitHub Repository: https://github.com/Vikyath5/signup-form-project
+- Live Demo: https://signup-form-project-iota.vercel.app/
+
+
 # A Signup Form That Doesn't Suck
 
 A polished multi-step signup form focused on good validation, user experience, accessibility, draft preservation, and secure server-side revalidation.
